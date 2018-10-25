@@ -1,0 +1,35 @@
+Daniel:
+=======
+
+  (1) Update location to be 'Meyer 10th floor (Room 1003)'
+
+
+Zifei:
+======
+
+  (1) Clean up remaining ugliness in 'submitform.py'
+  (2) Remove inclusion in 'submitform.py' of HTML return markup for errors (UGLY!)
+  (3) Revert removal of certain characters from web/emails in application summary stats
+  (4) Figure out how 'submit.py' (listed in HTML via JADE) interacts with
+      'submitform.py' (from python scripts), neither of which are listed in the NGINX
+      server config in '/etc'.
+
+
+Scott:
+======
+
+  (1) Fix logos for our upcoming sponsors
+  (2) Add instructions to 'README' for building 'wintersmith' on top of a virgin Debian
+      wheezy (7.0) install, using proper "Debian" packages and techniques, as much as
+      possible.
+  (3) Enable Google Analytics for Technion 3DS
+  (4) Add picture 'wall' for organizing committee (replace static listing)
+  (5) Add picture 'wall' for participants (to be) and mentors (to be)
+  (6) Add photograph from Beijing 2012 to 'Past 3DS Events Worldwide'
+
+
+Shai:
+=====
+
+  (1) Re-introduce Hebrew translation
+  (2) Update social media for 3DS in Israel

@@ -1,0 +1,187 @@
+include ../util
+
+//- wb:livestream(skin='silver', titlebar='n', member='n', topic='Technion3DS', width='auto', height='600')
+
+//
+// TODO: add social media networks
+//
+#social.well
+  if page.metadata.lang === 'hebrew'
+    p(style='text-align:center')
+      | :ב ונירחא בוקע
+      a(href='http://www.facebook.com/Technion3DS', target='_blank')
+        i.just-vector F
+        |  Facebook
+      | |
+      a(href='https://twitter.com/Technion3DS', target='_blank')
+        i.just-vector t
+        |  Twitter
+  else
+    p(style='text-align:center')
+      | Follow us on
+      a(href='http://www.facebook.com/Technion3DS', target='_blank')
+        i.just-vector F
+        |  Facebook
+      |  &amp;
+      a(href='https://twitter.com/Technion3DS', target='_blank')
+        i.just-vector t
+        |  Twitter
+      | !
+
+#event-details.well
+  if page.metadata.lang === 'hebrew'
+    h3
+      a(href='/hebrew/info/', style='color:inherit') עוריא יטרפ
+
+    table.table.table-condensed(style='margin-bottom:10px')
+      tbody
+        tr
+          th(style='width:25%') ןמז
+          td
+             | 2013 ינויב
+             br
+             | (םסרופי תקיודמ העש / ךיראת)
+        tr
+          th(style='width:25%') שגפמ םוקמ
+          td
+             | רייאמ ןיינב
+             br
+             | הפיח ,ןוינכטב
+  else
+    h3
+      a(href='/info/', style='color:inherit;font-size:22px') Event Details
+
+    table.table.table-condensed(style='margin-bottom:10px')
+      tbody
+        tr
+          th Time
+          td
+            | January 2 &ndash; 5, 2018
+            br
+            | (runs sixty hours from Tue eve, Wed noon to Fri afternoon)
+        tr
+          th Venue
+          td
+            | TBD
+            br
+            | Technion, Haifa
+
+  if page.metadata.lang === 'hebrew'
+    p(style='margin-bottom:0')
+      b תוירקיע תואצות
+
+    ul(style='margin-bottom:20px')
+      li םימכח םישנא שוגפ
+      li םיבוט םירבחו םניח לכואמ תונהיל
+      li תומזי לע דמל
+      li ךלש תולבגמהו תולוכיה תא ףוחדל
+      li קטייהה תיתימא הרבח לחתה
+      li יתימא תוריש / רצומה תא ךופהל
+      li (!בוט קיפסמ םא) ןומימ לבק
+  else
+    p(style='margin-bottom:0')
+      b Key outcomes
+
+    ul(style='margin-bottom:20px')
+      li Meet smart people
+      li Enjoy free food and good friends
+      li Learn about entrepreneurship
+      li Push your abilities &amp; limits
+      li Start real high-tech company
+      li Make real product / service
+      li Get funding (if good enough!)
+
+  if page.metadata.menu != 'apply'
+    if page.metadata.lang === 'hebrew'
+      p.apply(style='margin-top:30px;margin-bottom:20px;text-align:center')
+        //- a.btn.btn-primary.disabled 2013 ביבאה :םיחותפ םימושיי
+        a.btn.btn-primary 2013 ביבאה :םיחותפ םימושיי
+    else
+      p.apply(style='margin-top:30px;margin-bottom:20px;text-align:center')
+        a.btn.btn-primary(href='/apply/') Apply Now
+        //- a.btn.btn-primary.disabled
+          //- | Applications open:
+          //- br
+          //- | Spring, 2013
+
+  p
+    if page.metadata.lang === 'hebrew'
+      a(href='/about/#students') Recruiting
+      | :
+      a(href='#{encode("mailto:recruiting@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#students') Sponsorship
+      | : Shai Haim
+      a(href='#{encode("mailto:sponsorship@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#students') Chairman
+      | : Shai Haim
+      a(href='#{encode("mailto:chairman@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#faculty-adviser') Faculty Adviser
+      | :
+      a(href='#{encode("mailto:adviser@technion3ds.org")}')
+        i.icon-envelope
+    else
+      a(href='/about/#students') Recruiting
+      | :
+      a(href='#{encode("mailto:recruiting@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#students') Sponsorship
+      | : Shai Haim
+      a(href='#{encode("mailto:sponsorship@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#students') Chairman
+      | : Shai Haim
+      a(href='#{encode("mailto:chairman@technion3ds.org")}')
+        i.icon-envelope
+      br
+      a(href='/about/#faculty-adviser') Faculty Adviser
+      | :
+      a(href='#{encode("mailto:adviser@technion3ds.org")}')
+        i.icon-envelope
+
+//- #sponsors.well
+  if page.metadata.lang === 'hebrew'
+    h3 תימדקא רוסנופס
+    p
+      a(href='http://ee.technion.ac.il/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 ןוכיס ןוה רסנופס
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 יעוצקמ רוסנופס
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 היישעת רוסנופס
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+  else
+    h3 Academic Sponsor
+    p
+      a(href='http://ee.technion.ac.il/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 Venture Sponsor
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 Professional Sponsor
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+    h3 Industrial Sponsor
+    p
+      a(href='http://INSERT_URL/', target='_blank')
+        img(src='/images/INSERT_IMAGE.png')
+
+p(style='text-align:center;color:#aaa;text-shadow:0 1px #fff') First in Student Startups
+p(style='text-align:center;margin-bottom:0')
+  img.aside-logo(src='/images/logo-32-grey.png')

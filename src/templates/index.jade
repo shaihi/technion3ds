@@ -1,0 +1,146 @@
+extends page
+
+block prepend body-container
+
+  .thru-container.tagline-container
+    .container
+      .row
+        .span6
+          img(src='/images/logo-univ.png')
+        .span6
+          #carousel.carousel.slide
+            .carousel-inner
+              .active.item
+                img(src='/images/startup.jpg')
+                .carousel-caption
+                  h4 40 entrepreneurs, 3 days, your tech startup
+                  p
+
+                   | 3-Day Startup is an entrepreneurship education program
+                   | designed for university students with an emphasis on
+                   | learning by doing. The idea is simple: start tech
+                   | companies over the course of three days.
+
+              .item
+                img(src='/images/learning-by-doing.jpg')
+                .carousel-caption
+                  h4 Learning by doing
+                  p
+                    | Our philosophy is all about
+                    strong learning by doing
+                    | . This approach leads to tangible success stories of
+                    | student entrepreneurship: 2000 students participating in
+                    | 3-Day Startup events in 11 countries have given rise to
+                    | 28 companies collectively raising $8 million in
+                    | investment.
+
+              .item
+                img(src='/images/pitch.jpg')
+                .carousel-caption
+                  h4 Pitches and prototypes to investors and entrepreneurs
+                  p
+
+                   | Sunday night of 3-Day Startup is when students show the
+                   | fruits of their labor: teams deliver an investor pitch
+                   | and a prototype demonstration to an esteemed panel of
+                   | notable investors, entrepreneurs, and professors.
+
+              .item
+                img(src='/images/customers.jpg')
+                .carousel-caption
+                  h4 Get kicked out of the building and talk to customers
+                  p
+
+                    | Getting to know your customer is a key part of building
+                    | a business that solves a real customer problem. Talking
+                    | with individuals and companies that represent your
+                    | customer base is an integral part of the 3-Day Startup
+                    | experience.
+
+              .item
+                img(src='/images/sleep-deprivation.jpg')
+                .carousel-caption
+                  h4 Experience the joys of sleep deprivation
+                  p
+
+                    | Learn more in 3 days about entrepreneurship and the
+                    | power of caffeine than you ever thought possible.
+
+            a.carousel-control.left(href='#carousel', data-slide='prev') &lsaquo;
+            a.carousel-control.right(href='#carousel', data-slide='next') &rsaquo;
+
+block content
+
+  p.lead
+
+    | Over the past four years, thirty-eight 3DS events on four continents
+    | have given rise to 28 companies receiving $8 million in funding.
+    | Thirteen companies from 3DS have been accepted to accelerators such as Y
+    | Combinator, TechStars, and 500 Startups.
+
+  h3 What is 3-Day Startup?
+
+  p
+
+    | 3-Day Startup (3DS) is a ~60 hour-long workshop in which you &mdash; as one
+    | of a select group of top students from engineering, business, design, and
+    | other diverse fields &mdash; work as part of a small team to launch a
+    | high-tech company and pitch your vision to investors.
+
+  .forbes-quote.well
+    blockquote
+      p(style='margin-bottom:0') ...fostering new ideas through intense hands-on education.
+      small
+        a(href='http://www.forbes.com/sites/michaelnoer/2011/08/03/top-colleges-bushman/', target='_blank') Forbes
+
+  //- 
+  p
+
+    | 3-Day Startup is an academic program designed to teach entrepreneurial
+    | skills in an extreme hands-on environment and enable students to start
+    | companies.
+
+  p
+
+    | The 3DS program creates a living entrepreneurship laboratory on
+    | university campuses by bringing together students ranging from freshmen
+    | to freshly-minted PhDs, with diverse backgrounds, including computer
+    | science, business, engineering, law, design, communications and others.
+    | Participants gain experience in cross-disciplinary collaboration,
+    | brainstorming and ideation, and group productivity, including ad-hoc
+    | leadership and decision-making under severe time constraints. The
+    | resulting experience is just like that of working with a budding startup
+    | company.
+
+  p
+
+    | 3-Day Startup has a track record of success across the globe. The 2000+
+    | 3DS alumni from 38 events over the last three years have started 28
+    | technology companies that have collectively raised over $8 million in
+    | investment capital.
+
+
+  //- TODO: Update when there is local Haifa- / Israeli-based media interest in Technion 3DS
+
+  //- h3 Featured In
+
+  //- - var medias = []
+  //- - medias.push({img: '/images/LOGO_OF_MEDIA_1.png', link: 'http:URL_LINK_TO_MEDIA_1'})
+  //- - medias.push({img: '/images/LOGO_OF_MEDIA_2.png', link: 'http:URL_LINK_TO_MEDIA_2'})
+  //- - medias.push({img: '/images/LOGO_OF_MEDIA_3.png', link: 'http:URL_LINK_TO_MEDIA_3'})
+  //- p
+  //-   each media in medias
+  //-     a(href='#{media.link}', target='_blank', style='margin-right:30px')
+  //-       img(src='#{media.img}', style='width:210px')
+
+  h3 3DS Events at Top Universities around the World
+  p
+    img.drop-shadow(src='/images/univs.png')
+
+  h3 Companies Founded by 3DS Alumni
+  p
+    a(href='http://3daystartup.org/companies-founded-by-3ds-alumni/', target='_blank')
+      img.companies.drop-shadow(src='/images/companies.png')
+
+  p(style='margin-top:2em')
+    a(href='/info/') Learn more about 2018 Technion 3DS &rsaquo;

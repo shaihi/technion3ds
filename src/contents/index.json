@@ -1,0 +1,5 @@
+{
+  "template": "index.jade",
+  "title": "Home",
+  "menu": "home"
+}

@@ -1,0 +1,49 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      if page.metadata.lang === 'hebrew'
+        a.brand(href='/hebrew/') Technion 3DS | םימי תשולשב פאטראטס ןוינכטה
+      else
+        a.brand(href='/') Technion 3DS
+      .nav-collapse
+        ul.nav
+          - var nav = {}; nav[page.metadata.menu] = 'active'
+          if page.metadata.lang === 'hebrew'
+            li(class='#{nav.home}')
+              a(href='/') תיבה דומע
+            li(class='#{nav.info}')
+              a(href='/hebrew/info/') עדימ
+            li(class='#{nav.faq}')
+              a(href='/faq/') FAQ
+            //- li(class='#{nav.apply}')
+            li(class='#{nav.apply}', style='font-weight:bold')
+              a(href='/hebrew/apply/') םשייל
+            li(class='#{nav.sponsor}')
+              a(href='/sponsor/') קדנס
+            li(class='#{nav.about}')
+              a(href='/about/') תודוא
+            li.divider-vertical
+            li
+              a(href='/') English
+          else
+            li(class='#{nav.home}')
+              a(href='/') Home
+            li(class='#{nav.info}')
+              a(href='/info/') Event Info
+            li(class='#{nav.faq}')
+              a(href='/faq/') FAQ
+            //- li(class='#{nav.apply}')
+            li(class='#{nav.apply}', style='font-weight:bold')
+              a(href='/apply/') Apply
+            li(class='#{nav.sponsor}')
+              a(href='/sponsor/') Sponsor
+            li(class='#{nav.about}')
+              a(href='/about/') About
+            //- li.divider-vertical
+            //- li
+            //-   a(href='/hebrew/') עברית
+        img.nav-logo.pull-right(src='/images/logo-32-white.png')

@@ -1,0 +1,13 @@
+extends layout
+
+block append title
+  = ' | ' + page.title
+
+block body-container
+  .container.content-container
+    .row
+      .content.main-content.span9
+        block content
+        != page.html
+      .aside.span3
+        include partials/aside

@@ -1,0 +1,6 @@
+#Things to update for each batch
+submitform.py:
+Update the appdir for the relevant batch
+Update the confirmation email with the correct recruiting person name
+Update the confirmation email with the correct results time
+Update the HTML footer and header with correct text

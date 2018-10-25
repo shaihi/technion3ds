@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      title
+        block title
+          = locals.name
+      meta(name='viewport', content='width=device-width')
+      meta(name='description', content=locals.description)
+      link(rel='stylesheet', href='/styles/bootstrap.min.css')
+      link(rel='stylesheet', href='/styles/bootstrap-responsive.min.css')
+      link(rel='stylesheet', href='/styles/style.css')
+  body(class='#{page.metadata.menu} #{page.metadata.lang}', data-spy='scroll', data-target='.subnav', data-offset='90')
+
+    include partials/nav
+
+    block body-container
+
+    include partials/footer
+
+    script(src='/scripts/jquery-1.12.3.min.js')
+    script(src='/scripts/bootstrap.min.js')
+    if page.metadata.menu === 'home'
+      script.
+        $(function() {
+          $('.carousel').carousel();
+        });
+    if page.metadata.menu === 'apply'
+      script(src='/scripts/jquery.validate.min.js')
+      script.
+        $(function() {
+          $('#apply-form').validate({
+            rules: {
+              resume: {
+                accept: 'pdf'
+              }
+            },
+            submitHandler: function(form) {
+              form.submit();
+            }
+          });
+          var requireAvaiExplain = function() {
+            var $radioNo = $('#f-available-no');
+            var $input = $('#f-available-no-explain');
+            if ($radioNo.is(':checked')) {
+              $input.attr('required', 'required');
+            } else {
+              $input.removeAttr('required');
+            }
+          };
+          $('#f-available-no, #f-available-yes')
+            .change(requireAvaiExplain)
+            .focus(requireAvaiExplain);
+          $('#f-available-no-explain')
+            .focus(requireAvaiExplain)
+            .click(requireAvaiExplain);
+        });
+    script(src='/scripts/html5shiv.js')
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-11342351-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

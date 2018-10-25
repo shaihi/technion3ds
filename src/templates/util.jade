@@ -1,0 +1,1 @@
+- var encode = function(o) {var r = '', l = o.length, c;for (var i = 0; i < l; i++) {r += '&#';c = o.charCodeAt(i);if (c < 100) {r += '0' + c} else {r += c}r += ';'}return r}

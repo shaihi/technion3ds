@@ -1,0 +1,6 @@
+*~
+.*~
+temp/
+.DS_Store
+*.pyc
+deploy/images/

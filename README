@@ -1,0 +1,41 @@
+Installation
+============
+
+  ( 0) install Debian Squeeze (ver. 6.0.7)
+  ( 1) 'aptitude install nginx'
+  ( 2) update Debian nginx vhost config (see '/etc/nginx/sites-enabled/technion3ds')
+  ( 3) verify that web server is working
+  ( 4) 'aptitude purge exim4 exim4-base exim4-config exim4-daemon-light postfix+'
+  ( 5) configure mail delivery
+       a) postfix (see '/etc/postfix/main.cf')
+       b) mail host name (see '/etc/mailname')
+       c) aliases (see '/etc/aliases')
+  ( 6) 'aptitude install python-flup'
+       a) No further configuration of WSGI is necessary beyong that
+          already accomplished in '/etc/nginx/sites-enabled/technion3ds'.
+          Further, and *IMPORTANTLY* (CONFUSINGLY) the actual names of the
+          python scripts do not have to be referenced, nor seemingly to match
+          those specified in the HTML of the application page.
+          (Figuring this out remains a TODO item.)
+  ( 7) 'aptitude install a2ps pdftk python-pypdf ghostscript'
+       a) ensure proper paper-size: 'echo a4 > /etc/papersize'
+  ( 8) 'aptitude install ratproxy'
+  ( 9) ensure that denyhosts is installed / configured to prevent ssh cracking
+  (10) create initial directories
+       a) Names:
+          '/var/www/technion3ds'
+          '/var/www/technion3ds-scripts'
+          '/var/www/technion3ds-applicant-data'
+       b) Set permissions: 'chmod 750 /var/www/technion3ds*'
+       c) Initial setup:
+            'cp -a ./src/* /var/www/technion3ds'
+            'cp -a ./python/* /var/www/technion3ds-scripts'
+       d) Set ownership:
+            'chown -R www-data.www-data /var/www/technion3ds*'
+
+Running Server
+==============
+
+  ( 0) Ensure that NGINX is already running
+  ( 1) Start python script to connect to CGI handler via WSGI
+       a) 'sudo StartTechnionCGI_Server.sh'

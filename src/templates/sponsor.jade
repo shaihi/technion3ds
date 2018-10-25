@@ -1,0 +1,105 @@
+extends page
+
+block content
+
+  include util
+
+  h1 Sponsor
+
+
+
+
+  h2 2018 Sponsors
+
+  - sponsorCats = []
+
+  //- sponsorCats.push({title: 'The Sponsor', sponsors: [{abbr: 'StartUP MBA', name: 'StartUP MBA', logo: '/images/startupmba_logo.png', link: 'http://startupmba.technion.ac.il', intro: ['']}]})
+  - sponsorCats.push({title: 'Partners', sponsors: [{abbr: 'yazamut', name: 'Bronica Entrepreneurship Center', logo: '/images/logo_bec.png', link: 'http://www.yazamut.technion.ac.il', intro: []}]})
+
+    mixin sponsorTd(sponsor)
+     td(style='text-align:center')
+       a(href='#{sponsor.link}', target='_blank')
+         p
+           img(src='#{sponsor.logo}', style='max-width:450px; max-height:450px')
+         //- p(style='margin-bottom:0')
+         //-   span= sponsor.name
+      //- td
+      //-   p(style='text-align:left')
+      //-    '#{sponsor.intro}'
+     //- td
+     //-   a(href='#', data-toggle='modal', data-target='##{sponsor.abbr.toLowerCase()}-intro-modal') Learn more &raquo;
+
+   table.table.table-striped
+     tbody
+       each sponsorCat in sponsorCats
+         tr
+           th(rowspan='#{sponsorCat.sponsors.length}')= sponsorCat.title
+           mixin sponsorTd(sponsorCat.sponsors[0])
+         - for (var i = 1; i < sponsorCat.sponsors.length; i++)
+           tr
+             mixin sponsorTd(sponsorCat.sponsors[i])
+
+   //- each sponsorCat in sponsorCats
+   //-   each sponsor in sponsorCat.sponsors
+   //-     .modal.hide.fade(id='#{sponsor.abbr.toLowerCase()}-intro-modal', aria-hidden='true')
+   //-       .modal-header
+   //-         button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+   //-         h3= sponsor.name
+   //-       .modal-body
+   //-         p(style='text-align:center')
+   //-           a(href='#{sponsor.link}', target='_blank')
+   //-             img(src='#{sponsor.logo}')
+   //-         each para in sponsor.intro
+   //-           p= para
+   //-       .modal-footer
+   //-         a.btn(href='#', data-dismiss='modal', aria-hidden='true') Close
+
+  //- h2 Opportunities
+
+  //- p
+
+  //-   | Sponsorships are still available to help defray operational
+  //-   | considerations for the 2015 Technion 3DS event.  We are particularly
+  //-   | interested in sponsorships from Haifa-based corporations, high-tech
+  //-   | startups, investment funds (venture capital, angel groups, and
+  //-   | incubators), professional firms, and R&amp;D divisions of high-tech
+  //-   | firms. Corporate sponsorship provides opportunities for involvement
+  //-   | throughout the event, and the ability to mentor student teams. At many
+  //-   | other global 3DS events, this has historically led to unique
+  //-   | possibilities in terms of investments in early startups, recruitment of
+  //-   | future engineers and managers from pre-selected top students, and
+  //-   | general exposure of your firm to future business and engineering leaders
+  //-   | of Israel.
+
+  //- h2 Benefits
+
+  //- ul
+  //-   li
+  //-     | Direct access to the entrepreneurial-minded students and outstanding
+  //-     | business plans from top universities
+  //-   li Opportunity to promote brand to future business leaders of Israel
+  //-   li
+  //-     | Media coverage in campus and national newspapers, radio stations, and
+  //-     | noteworthy blogs
+
+  //- h2 Process
+
+  //- p
+
+  //-   | Please
+  //-   a(href='#{("mailto:chairman@technion3ds.org")}')
+  //-     | contact Shai Haim
+  //-     i.icon-envelope(style='vertical-align:text-bottom')
+  //-   |  (sponsorship chair) for more details.
+
+  //- p
+
+  //-   | To remove even the appearance of any impropriety, all sponsorship
+  //-   | payments are made out to and received directly by the Technion,
+  //-   | with full receipts and acknowledgment provided.  The monies are
+  //-   | processed by a full-time administrative employee who specializes in
+  //-   | such finances.
+
+  //-   | We thank you for helping to enable the education of our students, their
+  //-   | growth into future leaders of Haifa and Israel, and the founding of
+  //-   | some great tech startups!

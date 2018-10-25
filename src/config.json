@@ -1,0 +1,12 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Technion 3DS",
+    "owner": "Technion 3DS",
+    "description": "Official Technion 3DS Website"
+  },
+  "ignore": [
+    "*.styl"
+  ],
+  "output": "../deploy"
+}
