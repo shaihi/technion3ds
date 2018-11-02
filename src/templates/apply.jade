@@ -88,212 +88,213 @@ block content
       | that you upload as part of the application. Further, we cap the
       | maximum permissible upload size at 4 MB.
 
-  h2 Application Form
+  a(href="https://goo.gl/forms/3sa2UuwWNuQiAhym1")
+    h2 Press Here for The Application Form
 
-  form#apply-form(action="submit.php", method="post", name="applyform", enctype="multipart/form-data")
-    section
-      ul.unstyled.fields
-        li.required
-          label(for='f-first-name') Given Name
-          input#f-first-name(name='first-name', type='text', maxlength='255', required)
-        li.required
-          label(for='f-last-name') Family Name
-          input#f-last-name(name='last-name', type='text', maxlength='255', required)
-        li.required
-          label(for='f-email') Email
-          input#f-email(name='email', type='email', spellcheck='false', maxlength='255', required)
-        li.required
-          label(for='f-phone') Phone Number
-          input#f-phone(name='phone', type='tel', maxlength='255', required)
-        li
-          label(for='f-website') Your Linkedin page (please create one if none exists yet)
-          input#f-website(name='website', type='url', spellcheck='false', maxlength='255')
+  //- form#apply-form(action="submit.php", method="post", name="applyform", enctype="multipart/form-data")
+  //-   section
+  //-     ul.unstyled.fields
+  //-       li.required
+  //-         label(for='f-first-name') Given Name
+  //-         input#f-first-name(name='first-name', type='text', maxlength='255', required)
+  //-       li.required
+  //-         label(for='f-last-name') Family Name
+  //-         input#f-last-name(name='last-name', type='text', maxlength='255', required)
+  //-       li.required
+  //-         label(for='f-email') Email
+  //-         input#f-email(name='email', type='email', spellcheck='false', maxlength='255', required)
+  //-       li.required
+  //-         label(for='f-phone') Phone Number
+  //-         input#f-phone(name='phone', type='tel', maxlength='255', required)
+  //-       li
+  //-         label(for='f-website') Your Linkedin page (please create one if none exists yet)
+  //-         input#f-website(name='website', type='url', spellcheck='false', maxlength='255')
 
-        li.required
-          label
+  //-       li.required
+  //-         label
 
-            | Technion 3DS runs from
-            strong Tuesday with a break in Wednesday - please review the info
-                strong page for the full schedule
-            | . Are you available continuously throughout this time span?
-            em
-              | It would be almost impossible for you to participate if you
-              | cannot commit fully to this period (this means you cannot work or study during this time).
+  //-           | Technion 3DS runs from
+  //-           strong Tuesday with a break in Wednesday - please review the info
+  //-               strong page for the full schedule
+  //-           | . Are you available continuously throughout this time span?
+  //-           em
+  //-             | It would be almost impossible for you to participate if you
+  //-             | cannot commit fully to this period (this means you cannot work or study during this time).
 
-          fieldset
-            label.radio
-              input#f-available-yes(type='radio', name='available', value='yes', checked, required)
-              | Yes
-            label.radio.inline
-              input#f-available-no(type='radio', name='available', value='no', onclick='document.getElementById("f-available-no-explain").focus();', required)
-              | No (please explain)
-            input#f-available-no-explain(type='text', name='available-explain', onkeyup='document.getElementById("f-available-no").checked = "checked";', onclick='document.getElementById("f-available-no").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
+  //-         fieldset
+  //-           label.radio
+  //-             input#f-available-yes(type='radio', name='available', value='yes', checked, required)
+  //-             | Yes
+  //-           label.radio.inline
+  //-             input#f-available-no(type='radio', name='available', value='no', onclick='document.getElementById("f-available-no-explain").focus();', required)
+  //-             | No (please explain)
+  //-           input#f-available-no-explain(type='text', name='available-explain', onkeyup='document.getElementById("f-available-no").checked = "checked";', onclick='document.getElementById("f-available-no").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
 
-    section
-      h3 Background and Education
-      ul.unstyled.fields
-        li.required
-          label Are you a current Technion student, an alumnus, or else a nascent entrepreneur?
-          fieldset
-            label.radio.inline
-              input(type='radio', name='university', value='TechnionStudent', required, checked)
-              | Technion student
-            label.radio.inline
-              input(type='radio', name='university', value='TechnionAlumnus', required)
-              | Technion alumnus
-            label.radio.inline
-              input(type='radio', name='university', value='ExternalEntrepreneur', required)
-              | external entrepreneur
+  //-   section
+  //-     h3 Background and Education
+  //-     ul.unstyled.fields
+  //-       li.required
+  //-         label Are you a current Technion student, an alumnus, or else a nascent entrepreneur?
+  //-         fieldset
+  //-           label.radio.inline
+  //-             input(type='radio', name='university', value='TechnionStudent', required, checked)
+  //-             | Technion student
+  //-           label.radio.inline
+  //-             input(type='radio', name='university', value='TechnionAlumnus', required)
+  //-             | Technion alumnus
+  //-           label.radio.inline
+  //-             input(type='radio', name='university', value='ExternalEntrepreneur', required)
+  //-             | external entrepreneur
 
-        li.required
-          label Major or Field-of-Study (Current degree, or, if not presently a student, highest degree already obtained)
-          select(name='major')
-            each major in ['Computer Science', 'Electrical Engineering', 'Business (Industrial Engineering / Management / Economics / MBA)', 'Design (Architecture / Graphic / Industrial)']
-              option(value='#{major}')= major
-            option(value='-', disabled) -----
-            each major in ['Math', 'Physics', 'Chemistry', 'Biology', 'Biomedical Engineering', 'Materials Science and Engineering', 'Mechanical Engineering', 'Aerospace Engineering', 'Chemical Engineering', 'Civil and Environmental Engineering', 'Biotechnology and Food Engineering']
-              option(value='#{major}')= major
-            option(value='-', disabled) -----
-            each major in ['Medicine', 'Education in Science and Technology', 'Humanities and Arts']
-              option(value='#{major}')= major
+  //-       li.required
+  //-         label Major or Field-of-Study (Current degree, or, if not presently a student, highest degree already obtained)
+  //-         select(name='major')
+  //-           each major in ['Computer Science', 'Electrical Engineering', 'Business (Industrial Engineering / Management / Economics / MBA)', 'Design (Architecture / Graphic / Industrial)']
+  //-             option(value='#{major}')= major
+  //-           option(value='-', disabled) -----
+  //-           each major in ['Math', 'Physics', 'Chemistry', 'Biology', 'Biomedical Engineering', 'Materials Science and Engineering', 'Mechanical Engineering', 'Aerospace Engineering', 'Chemical Engineering', 'Civil and Environmental Engineering', 'Biotechnology and Food Engineering']
+  //-             option(value='#{major}')= major
+  //-           option(value='-', disabled) -----
+  //-           each major in ['Medicine', 'Education in Science and Technology', 'Humanities and Arts']
+  //-             option(value='#{major}')= major
 
-        li.required
-          label Degree (Current degree, or, if not presently a student, highest degree already obtained)
-          fieldset
-            label.radio.inline
-              input(type='radio', name='degree', value='Undergraduate', required, checked)
-              | Undergraduate
-            label.radio.inline
-              input(type='radio', name='degree', value='Master', required)
-              | Master
-            label.radio.inline
-              input(type='radio', name='degree', value='PhD', required)
-              | Ph.D. / M.D.
+  //-       li.required
+  //-         label Degree (Current degree, or, if not presently a student, highest degree already obtained)
+  //-         fieldset
+  //-           label.radio.inline
+  //-             input(type='radio', name='degree', value='Undergraduate', required, checked)
+  //-             | Undergraduate
+  //-           label.radio.inline
+  //-             input(type='radio', name='degree', value='Master', required)
+  //-             | Master
+  //-           label.radio.inline
+  //-             input(type='radio', name='degree', value='PhD', required)
+  //-             | Ph.D. / M.D.
 
-        li
-          label I am familiar with these concepts:
-          fieldset
-            each concept in ['Lean startup', 'Agile development', 'Business model generation', 'Market validation']
-              label.checkbox
-                input(type='checkbox', name='concept[]', value='#{concept}')
-                = concept
+  //-       li
+  //-         label I am familiar with these concepts:
+  //-         fieldset
+  //-           each concept in ['Lean startup', 'Agile development', 'Business model generation', 'Market validation']
+  //-             label.checkbox
+  //-               input(type='checkbox', name='concept[]', value='#{concept}')
+  //-               = concept
 
-        li
+  //-       li
 
-          fieldset
-            label
+  //-         fieldset
+  //-           label
 
-              p
+  //-             p
 
-                | Successful startups often require individual founders to
-                | function in varied roles and complete many different tasks.
-                | Technion 3DS is no different, and, ideally, you should revel
-                | in such a dynamic environment.
-              p
-                | That being said, in which of the below areas are you most
-                | skilled?
+  //-               | Successful startups often require individual founders to
+  //-               | function in varied roles and complete many different tasks.
+  //-               | Technion 3DS is no different, and, ideally, you should revel
+  //-               | in such a dynamic environment.
+  //-             p
+  //-               | That being said, in which of the below areas are you most
+  //-               | skilled?
 
-            each position in ['Maker (building stuff with my hands)','Coming up with ideas','Agriculture expert','Making new connections (high people skills) ','Front-end (User-Interface) Developer', 'Back-end Developer', 'Public speaking/presenting','Database / Cloud-Computing Developer', 'Architecture Designer', 'Hardware Developer', 'Medical background','Interaction Designer', 'Graphic Designer', 'Media Coordinator', 'Advertising Coordinator', 'Business-plan Author', 'Marketing Lead', 'Sales Coordinator', 'Product Manager','understanding how stuff work (products, processes)']
-              if position === '---'
-                p
-              else
-                label.checkbox
-                  input(type='checkbox', name='position[]', value='#{position}')
-                  = position
-            p
-            label.checkbox.inline
-              input#f-skill-other(type='checkbox', name='position', value='Other', onclick='document.getElementById("f-skill-other-text").focus();')
-              | Other
-            input#f-skill-other-text(type='text', name='position-other', onclick='document.getElementById("f-skill-other").checked = "checked";', onkeyup='document.getElementById("f-skill-other").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
+  //-           each position in ['Maker (building stuff with my hands)','Coming up with ideas','Agriculture expert','Making new connections (high people skills) ','Front-end (User-Interface) Developer', 'Back-end Developer', 'Public speaking/presenting','Database / Cloud-Computing Developer', 'Architecture Designer', 'Hardware Developer', 'Medical background','Interaction Designer', 'Graphic Designer', 'Media Coordinator', 'Advertising Coordinator', 'Business-plan Author', 'Marketing Lead', 'Sales Coordinator', 'Product Manager','understanding how stuff work (products, processes)']
+  //-             if position === '---'
+  //-               p
+  //-             else
+  //-               label.checkbox
+  //-                 input(type='checkbox', name='position[]', value='#{position}')
+  //-                 = position
+  //-           p
+  //-           label.checkbox.inline
+  //-             input#f-skill-other(type='checkbox', name='position', value='Other', onclick='document.getElementById("f-skill-other-text").focus();')
+  //-             | Other
+  //-           input#f-skill-other-text(type='text', name='position-other', onclick='document.getElementById("f-skill-other").checked = "checked";', onkeyup='document.getElementById("f-skill-other").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
 
 
-        li.required
-          label(for='f-sample')
+  //-       li.required
+  //-         label(for='f-sample')
 
-            | Work Samples: Links to and/or description of work that exemplify
-            | your skills, e.g. previous startups, projects you lead, business
-            | plans, etc. (please be as descriptive as can be)
+  //-           | Work Samples: Links to and/or description of work that exemplify
+  //-           | your skills, e.g. previous startups, projects you lead, business
+  //-           | plans, etc. (please be as descriptive as can be)
 
-          textarea#f-sample.input-xxlarge(name='sample', spellcheck='true', rows='7', cols='50', required)
+  //-         textarea#f-sample.input-xxlarge(name='sample', spellcheck='true', rows='7', cols='50', required)
 
-        li.required
-          label(for='f-resume') Resume
-            strong (requires PDF format in English, maximum file size is 4 MB)
-          input#f-resume(name='resume', type='file', accept='application/pdf', required)
+  //-       li.required
+  //-         label(for='f-resume') Resume
+  //-           strong (requires PDF format in English, maximum file size is 4 MB)
+  //-         input#f-resume(name='resume', type='file', accept='application/pdf', required)
 
-    section
-      h3 Motivation and Ideas for 3DS
-      ul.unstyled.fields
-        li.required
-          label(for='f-motivation')
+  //-   section
+  //-     h3 Motivation and Ideas for 3DS
+  //-     ul.unstyled.fields
+  //-       li.required
+  //-         label(for='f-motivation')
 
-            p
-              i Motivation:
-            p
-              | Why do you want to participate in Technion 3DS?
-            p
-              | Why do you want to pursue a startup idea or serve as the
-              | founder of a company?
-            p
-              | What good qualities or characteristics do you possess that
-              | would make you a strong participant for our event, and a
-              | valued member of a founding management team?
-            p
-              em
-                | These might be specific skills, larger personality traits,
-                | or some combination of both.
+  //-           p
+  //-             i Motivation:
+  //-           p
+  //-             | Why do you want to participate in Technion 3DS?
+  //-           p
+  //-             | Why do you want to pursue a startup idea or serve as the
+  //-             | founder of a company?
+  //-           p
+  //-             | What good qualities or characteristics do you possess that
+  //-             | would make you a strong participant for our event, and a
+  //-             | valued member of a founding management team?
+  //-           p
+  //-             em
+  //-               | These might be specific skills, larger personality traits,
+  //-               | or some combination of both.
 
-          textarea#f-motivation.input-xxlarge(name='motivation', spellcheck='true', rows='7', cols='50', required)
+  //-         textarea#f-motivation.input-xxlarge(name='motivation', spellcheck='true', rows='7', cols='50', required)
 
-        li.required
-          label(for='f-ideas')
+  //-       li.required
+  //-         label(for='f-ideas')
 
-            p
-              i Ideas:
-            p
-              | Do you have an idea for a startup that you'd like to pursue?
-            p
+  //-           p
+  //-             i Ideas:
+  //-           p
+  //-             | Do you have an idea for a startup that you'd like to pursue?
+  //-           p
 
-              | If so, please give us a summary of your idea, exploring the
-              | technical and business aspects that would encourage investment
-              | in your idea and your startup.
-            P
-              | If you are asking yourself whether you should reveal your idea,
-              | please visit the
-              a(href='/faq/')  FAQ section
-              | .
-            p
-              | If you don't have an idea at the moment, please describe one or two
-              | recent startups that you find exciting, and explain why you
-              | think they are special.
-              em
-                | (Please be advised that Facebook, Twitter, Instagram,
-                | Groupon, Fiverr, Waze are no longer young enough to qualify
-                | as startups in this context.)
+  //-             | If so, please give us a summary of your idea, exploring the
+  //-             | technical and business aspects that would encourage investment
+  //-             | in your idea and your startup.
+  //-           P
+  //-             | If you are asking yourself whether you should reveal your idea,
+  //-             | please visit the
+  //-             a(href='/faq/')  FAQ section
+  //-             | .
+  //-           p
+  //-             | If you don't have an idea at the moment, please describe one or two
+  //-             | recent startups that you find exciting, and explain why you
+  //-             | think they are special.
+  //-             em
+  //-               | (Please be advised that Facebook, Twitter, Instagram,
+  //-               | Groupon, Fiverr, Waze are no longer young enough to qualify
+  //-               | as startups in this context.)
 
-          textarea#f-ideas.input-xxlarge(name='ideas', spellcheck='true', rows='7', cols='50', required)
+  //-         textarea#f-ideas.input-xxlarge(name='ideas', spellcheck='true', rows='7', cols='50', required)
 
-        li
-          label(for='f-additional')
+  //-       li
+  //-         label(for='f-additional')
 
-            p
-              i Additional info:
-            p
-              | Is there anything you'd like to add that we didn't ask about?
+  //-           p
+  //-             i Additional info:
+  //-           p
+  //-             | Is there anything you'd like to add that we didn't ask about?
 
-          textarea#f-additional.input-xxlarge(name='additional', spellcheck='true', rows='7', cols='50', required)
+  //-         textarea#f-additional.input-xxlarge(name='additional', spellcheck='true', rows='7', cols='50', required)
 
-        li
-          label How did you hear about us?
-          fieldset
-            each channel in ['Poster', 'Flyer', 'Mailing list', 'Facebook / Twitter', 'In-class announcement', 'A past participant','Friend']
-              label.checkbox
-                input(type='checkbox', name='channel[]', value='#{channel}')
-                = channel
-            label.checkbox.inline
-              input#f-channel-other(type='checkbox', name='channel', value='Other', onclick='document.getElementById("f-channel-other-text").focus();')
-              | Other
-            input#f-channel-other-text(type='text', name='channel-other', onclick='document.getElementById("f-channel-other").checked = "checked";', onkeyup='document.getElementById("f-channel-other").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
+  //-       li
+  //-         label How did you hear about us?
+  //-         fieldset
+  //-           each channel in ['Poster', 'Flyer', 'Mailing list', 'Facebook / Twitter', 'In-class announcement', 'A past participant','Friend']
+  //-             label.checkbox
+  //-               input(type='checkbox', name='channel[]', value='#{channel}')
+  //-               = channel
+  //-           label.checkbox.inline
+  //-             input#f-channel-other(type='checkbox', name='channel', value='Other', onclick='document.getElementById("f-channel-other-text").focus();')
+  //-             | Other
+  //-           input#f-channel-other-text(type='text', name='channel-other', onclick='document.getElementById("f-channel-other").checked = "checked";', onkeyup='document.getElementById("f-channel-other").checked = "checked";', style='vertical-align:sub;margin-left:.5em')
 
-    input.btn.btn-primary(type='submit', value='Submit')
+  //-   input.btn.btn-primary(type='submit', value='Submit')
 
